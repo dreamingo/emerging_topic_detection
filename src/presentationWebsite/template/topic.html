@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block main_content %}
+<div class="main_container">
+<h2>Popular Events Between {{start_date}} and {{end_date}}</h2>
+
+<div id="orderModal" class="modal hide fade" tabindex="-1" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3>Related Weibo</h3>
+  </div>
+  <div class="modal-body">
+  </div>
+</div>
+
+
+<div class="span10">
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <td>#</td>
+      <td class="date-info">Date</td>
+      <td>Topic Content</td>
+      <td>Score</td>
+      <td>Related Weibo</td>
+    </tr>
+  </thead>
+  <tbody>
+    {% for topic in topic_list %}
+    {% if topic.start_date.day|divisibleby:2 %}
+      <tr class="day-even">
+    {% else %}
+      <tr class="day-odd">
+    {% endif %}
+      <td>{{ forloop.counter }}</td>
+      <td class="date-info">{{ topic.start_date.date }}</td>
+      <td>{{ topic.topic_content }}</td>
+      <td>{{ topic.score }}</td>
+      <td><button type="button" class="btn btn-primary detail" value="{{topic.mids}}" data-target="#orderModal" data-toggle="modal">view</button></td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+</div>
+<script type="text/javascript" src="/js/topic.js"></script>
+</div>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block main_content %}
+<div class="main_container">
+  {% if flag %}
+    <h2>Nutrition Chart of {{ term }}</h2>
+    <img src="/img/nutrition.png">
+    <h2>Energy Chart of {{ term }}</h2>
+    <img src="/img/energy.png">
+  {% else %}
+    <h2> Can not find term '{{ term }}'</h2>
+  {% endif %}
+</div>
+{% endblock %}

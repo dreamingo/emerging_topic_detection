@@ -1,0 +1,74 @@
+body {
+  /* background-color: rgb(147, 233, 147); */
+  background-color: white;
+}
+
+.nav-right {
+  margin: 10px 0 20px 201px;
+}
+
+.main_container{
+  width: 80%;
+  margin: 0 auto;
+}
+
+.main_container h1{
+  margin-left: 20px;
+}
+
+form label {
+  font-size: 20px;
+}
+
+legend {
+  font-size: 25px;
+}
+
+input[type="text"] {
+  height: 35px;
+}
+
+.form-horizontal .control-group {
+  margin-bottom: 8px;
+  margin-top: 0px;
+}
+
+input[type="date"] {
+  font-size: 20px;
+  height:34px;
+  width: 188px;
+}
+
+.alert {
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.date-info {
+  width: 120px;
+}
+
+.modal-body ul {
+  list-style-type: none;
+}
+
+.weibo-info {
+  background-color: rgb(220, 220, 220);
+  color: black;
+  border: 2px solid deepskyblue;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+#orderModal {
+  background-color: rgb(206, 231, 243);
+}
+
+.day-even {
+  background-color: rgb(206, 231, 243);
+}
+
+.day-odd {
+  background-color: rgb(69, 175, 226) ;
+}

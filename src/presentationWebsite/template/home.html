@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+{% block main_content %}
+<div class="main_container">
+  <h1>Popular Event Detection</h1>
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div class="span5">
+
+        <form id="search-form" method="GET" action="topic" class="form-horizontal">
+          <fieldset>
+            <legend>Search</legend>
+            <div class="control-group">
+              <label class="control-label">Start Date</label>
+              <div class="controls">
+                <input type="date" name="start_date" name="from" placeholder="from">
+              </div>
+            </div>
+            <div class="control-group">
+              <label class="control-label">End Date</label>
+              <div class="controls">
+                <input type="date" name="end_date" name="to" placeholder="to">
+              </div>
+            </div>
+            <div class="control-group">
+              <div class="controls">
+                <button id="search-btn" type="submit" class="btn btn-primary disabled" disabled="disabled">
+                  search
+                </button>
+              </div>
+            </div>
+          </fieldset>
+        </form>
+
+        <form method="GET" action="user_rank" class="form-horizontal">
+          <fieldset>
+            <legend>User Ranking</legend>
+            <div class="control-group">
+              <div class="controls">
+                <button type="submit" class="btn btn-primary">
+                  view
+                </button>
+              </div>
+            </div>
+          </fieldset>
+        </form>
+
+        <form method="GET" action="analysis" class="form-horizontal">
+          <fieldset>
+            <legend>Nutrition and Energy Analysis</legend>
+            <div class="control-group">
+              <div class="controls">
+                <input id="analysis-term" typ="text" name="term" placeholder="term">
+              </div>
+            </div>
+            <div class="control-group">
+              <div class="controls">
+                <button id="analysis-btn" type="submit" class="btn btn-primary disabled" disabled="disabled">
+                  submit
+                </button>
+              </div>
+            </div>
+          </fieldset>
+        </form>
+
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
